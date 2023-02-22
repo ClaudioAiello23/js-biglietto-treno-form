@@ -14,3 +14,11 @@ Sulla base delle precedenti informazioni fornite dall'utente:
 
 
 ESERCIZIO 22.02.2023 IMPOSTAZIONE SVOLGIMENTO - IPOTESI
+- implementare i tag input sul file html, che saranno i campi in cui l'utente
+inserirà i dati.
+- sostituire i richiami agli input che dovranno lavorare al posto dei prompt
+impostati precedentemente nel file js.
+- impostare un codice html/css funzionante con quanto dovremo visualizzare a video, seguendo la bozza fornita.
+- intervenire nel file JS per manipolare il Dom, e fare in modo che la sezione
+IL TUO BIGLIETTO della bozza appaia soltanto una volta che l'utente avrà
+cliccato sul bottone "Genera".
