@@ -26,7 +26,7 @@ let over65Price = parseFloat (basePrice /100 *60).toFixed(2);
 
 console.log(ageUser).value;
 
-// DA VERIFICARE
+// DA VERIFICARE - PER FABIO
 /*Impostazione per mostrare sulla pagina web il totale da pagare a seconda dei 
 dati compilati dall'utente*/
 if (ageUser.value == 'Minorenne'){
@@ -48,13 +48,13 @@ document.getElementById('carrozza').innerHTML ='Carrozza: ' + Math.floor(Math.ra
 document.getElementById('cp_code').innerHTML ='CP: ' + Math.floor(Math.random()*10000);
 
 
-// PROVA INSERIMENTO AZIONE BOTTONE "GENERA"
+// PROVA INSERIMENTO AZIONE BOTTONE "GENERA"  - PER FABIO
 const calcButton = document.getElementById('calc_button');
 
 calcButton.addEventListener('click',
 
 function() {
-  
+    
 }
 
 );
