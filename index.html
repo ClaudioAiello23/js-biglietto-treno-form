@@ -10,8 +10,37 @@
     <!-- /css collegamento -->
 </head>
 <body>
+    <main>
+        <!-- Inizio sezione inserimento dati utente -->
+        <section id="insert_data">
+            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="data_container">
+                <form action="-" method="get">
+                    <label for="name_user">Nome Cognome</label>
+                    <input type="text" name="name" id="name_user">
+                    <label for="km_travel">Km da percorrere</label>
+                    <input type="text" name="km" id="km_travel">
+                    <label for="age_user">Fascia d'età</label>
+                    <select name="age" id="age_user">
+                        <option value="Maggiorenne">Maggiorenne</option>
+                        <option value="Minorenne">Minorenne</option>
+                        <option value="Over65">Over65</option>
+                    </select>
+                    <button type="submit">Genera</button>
+                    <button type="reset">Annulla</button>
+                </form>
+            </div>
+        </section>
+        <!-- Fine sezione inserimento dati utente -->
+        <!-- Inizio sezione calcolo tariffa utente -->
+        <section id="your_price">
+            <div id="final_price">
 
+            </div>
 
+        </section>
+        <!-- Fine sezione calcolo tariffa utente -->
+    </main>
 
     
     <!-- Collegamento file Js-Javascript -->

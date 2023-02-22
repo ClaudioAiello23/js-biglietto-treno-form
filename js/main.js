@@ -1,12 +1,16 @@
 'use strict';
 
-/*- impostare variabile con valore prompt con la quale chiedere
-all'utente il numero di km che deve percorrere (variabile const)*/
-const kmTravel = parseInt (prompt ('PREGO INSERIRE IL NUMERO DI KM DA PERCORRERE'));
+/*- creare una variabile da associare al campo input con id="name_user",
+nome e cognome inseriti dall'utente (variabile const)*/
+const nameUser = document.getElementById('name_user');
 
-/*- impostare variabile con valore prompt con la quale chiedere
-all'utente l'età (variabile const)*/
-const etaUser = parseInt (prompt ('PREGO INSERIRE IL NUMERO DI ANNI'));
+/*- creare una variabile da associare al campo input con id="km_travel",
+chilometri da percorrere inseriti dall'utente (variabile const)*/
+const kmTravel = document.getElementById('km_travel');
+
+/*- creare una variabile da associare al campo input con id="age_user",
+età dell'utente (variabile const)*/
+const ageUser = document.getElementById('age_user').value;
 
 /*- impostare una variabile prezzo base del biglietto che è di 
 0,21 € per km (variabile let)*/
@@ -21,49 +25,15 @@ base e lo sconti del 40% (variabile let)*/
 let over65Price = parseFloat (basePrice /100 *60).toFixed(2);
 
 
-/*-Sulla base delle precedenti informazioni fornite dall'utente:
-- calcolare il prezzo totale da pagare, rispettando le condizioni sopra descritte.*/
-if (etaUser < 18){
-    console.log("Prezzo totale da pagare:", (kmTravel * under18Price).toFixed(2), "€");
-    
-} else if (etaUser > 65){
-    console.log("Prezzo totale da pagare:", (kmTravel * over65Price).toFixed(2), "€");
-
-} else {
-    console.log("Prezzo totale da pagare:", (kmTravel * basePrice).toFixed(2), "€");
-
-}
-
-
-/*Impostazione per mostrare sulla pagina web la tariffa di partenza a seconda dei 
-dati compilati dall'utente*/
-if (etaUser < 18){
-    document.getElementById('nb_age_user').innerHTML =  `La tua tariffa Minorenni: ${under18Price} €`;
-    
-    
-} else if (etaUser > 65){
-    document.getElementById('nb_age_user').innerHTML =  `La tua tariffa Over65: ${over65Price} €`;
-
-} else {
-    document.getElementById('nb_age_user').innerHTML =  `La tua tariffa: ${basePrice} €`;
-
-
-}
-
-/*Impostazione per mostrare sulla pagina web i km da percorrere a seconda dei 
-dati compilati dall'utente*/
-document.getElementById('nb_km_user').innerHTML =  `Chilometri da percorrere: ${kmTravel} km`;
-
-
 /*Impostazione per mostrare sulla pagina web il totale da pagare a seconda dei 
 dati compilati dall'utente*/
-if (etaUser < 18){
-    document.getElementById('nb_final_price').innerHTML ='TOTALE DA PAGARE: ' + (kmTravel * under18Price).toFixed(2) + "€";
+if (ageUser === Minorenne){
+    document.getElementById('final_price').innerHTML ='Biglietto Minorenne: ' + 'random_carrozza' + 'random codice CP' + (kmTravel * under18Price).toFixed(2) + "€";
     
-} else if (etaUser > 65){
-    document.getElementById('nb_final_price').innerHTML ='TOTALE DA PAGARE: ' + (kmTravel * over65Price).toFixed(2) + "€";
+} else if (etaUser === Over65){
+    document.getElementById('final_price').innerHTML ='Biglietto Over65: ' + 'random_carrozza' + 'random codice CP' + (kmTravel * over65Price).toFixed(2) + "€";
 
 } else {
-    document.getElementById('nb_final_price').innerHTML ='TOTALE DA PAGARE: ' + (kmTravel * basePrice).toFixed(2) + "€";
+    document.getElementById('final_price').innerHTML ='Biglietto Standard: ' + 'random_carrozza' + 'random codice CP' + (kmTravel * basePrice).toFixed(2) + "€";
 
 }
