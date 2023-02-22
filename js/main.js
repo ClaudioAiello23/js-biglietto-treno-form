@@ -6,7 +6,7 @@ const nameUser = document.getElementById('name_user');
 
 /*- creare una variabile da associare al campo input con id="km_travel",
 chilometri da percorrere inseriti dall'utente (variabile const)*/
-const kmTravel = document.getElementById('km_travel');
+const kmTravel = Number (document.getElementById('km_travel'));
 
 /*- creare una variabile da associare al campo input con id="age_user",
 età dell'utente (variabile const)*/
@@ -24,16 +24,37 @@ let under18Price = parseFloat (basePrice /100 *80).toFixed(2);
 base e lo sconti del 40% (variabile let)*/
 let over65Price = parseFloat (basePrice /100 *60).toFixed(2);
 
+console.log(ageUser).value;
 
+// DA VERIFICARE
 /*Impostazione per mostrare sulla pagina web il totale da pagare a seconda dei 
 dati compilati dall'utente*/
-if (ageUser === Minorenne){
-    document.getElementById('final_price').innerHTML ='Biglietto Minorenne: ' + 'random_carrozza' + 'random codice CP' + (kmTravel * under18Price).toFixed(2) + "€";
+if (ageUser.value == 'Minorenne'){
+    document.getElementById('final_price').innerHTML ='Biglietto Minorenne: ' +  ' random codice CP ' + (kmTravel * under18Price).toFixed(2) + "€";
     
-} else if (etaUser === Over65){
-    document.getElementById('final_price').innerHTML ='Biglietto Over65: ' + 'random_carrozza' + 'random codice CP' + (kmTravel * over65Price).toFixed(2) + "€";
+} else if (ageUser.value == 'Over65'){
+    document.getElementById('final_price').innerHTML ='Biglietto Over65: ' +  ' random codice CP ' + (kmTravel * over65Price).toFixed(2) + "€";
 
 } else {
-    document.getElementById('final_price').innerHTML ='Biglietto Standard: ' + 'random_carrozza' + 'random codice CP' + (kmTravel * basePrice).toFixed(2) + "€";
+    document.getElementById('final_price').innerHTML ='Biglietto Standard: ' +  ' random codice CP ' + (kmTravel * basePrice).toFixed(2) + "€";
 
 }
+
+
+
+// prova per numero carrozza - NUMERI RANDOM
+document.getElementById('carrozza').innerHTML ='Carrozza: ' + Math.floor(Math.random()*10);
+// prova per codice CP - NUMERI RANDOM
+document.getElementById('cp_code').innerHTML ='CP: ' + Math.floor(Math.random()*10000);
+
+
+// PROVA INSERIMENTO AZIONE BOTTONE "GENERA"
+const calcButton = document.getElementById('calc_button');
+
+calcButton.addEventListener('click',
+
+function() {
+  
+}
+
+);
