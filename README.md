@@ -14,15 +14,8 @@ Sulla base delle precedenti informazioni fornite dall'utente:
 
 
 ESERCIZIO 22.02.2023 IMPOSTAZIONE SVOLGIMENTO - IPOTESI
-- implementare i tag input sul file html, che saranno i campi in cui l'utente
-inserirà i dati.
-- sostituire i richiami agli input che dovranno lavorare al posto dei prompt
-impostati precedentemente nel file js; intevenire creando le variabili per
-il nome user, i chilometri da percorrere, l'età dell'utente.
+- implementare i tag input sul file html, che saranno i campi in cui l'utente inserirà i dati.
+- sostituire i richiami agli input che dovranno lavorare al posto dei prompt impostati precedentemente nel file js; intevenire creando le variabili per il nome user, i chilometri da percorrere, l'età dell'utente.
 - impostare un codice html/css funzionante con quanto dovremo visualizzare a video, seguendo la bozza fornita.
-- fare in modo che, premendo da pagina web il bottone "Genera", si compili la
-sezione IL TUO BIGLIETTO comprendente il calcolo del prezzo totale da pagare, e si generino dei numeri casuali indicanti il numero carrozza e il codice CP.
-- intervenire nel file JS per manipolare il Dom, e fare in modo che la sezione
-IL TUO BIGLIETTO della bozza appaia soltanto una volta che l'utente avrà
-cliccato sul bottone "Genera" (prima del click la sezione non deve essere
-presente nella pagina web).
+- fare in modo che, premendo da pagina web il bottone "Genera", si compili la sezione IL TUO BIGLIETTO comprendente il calcolo del prezzo totale da pagare, e si generino dei numeri casuali indicanti il numero carrozza e il codice CP.
+- intervenire nel file JS per manipolare il Dom, e fare in modo che la sezione IL TUO BIGLIETTO della bozza appaia soltanto una volta che l'utente avrà cliccato sul bottone "Genera" (prima del click la sezione non deve essere presente nella pagina web).

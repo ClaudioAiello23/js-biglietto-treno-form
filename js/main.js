@@ -37,17 +37,22 @@ const showContainer = document.querySelector('.hidden_container');
 calcButton.addEventListener('click',
 
 function() {
+
+             /*Aggiunge la classe show_container che fa apparire il contenitore
+    "il tuo biglietto al click del bottone (vedi css)"*/
+    showContainer.classList.add('show_container');
+
     document.getElementById('name_repeat').innerHTML = nameUser.value;
     
     document.getElementById('carrozza').innerHTML = Math.floor(Math.random()*10);
 
     document.getElementById('cp_code').innerHTML = Math.floor(Math.random()*100000);
-    /*Aggiunge la classe show_container che fa apparire il contenitore
-    "il tuo biglietto al click del bottone (vedi css)"*/
-    showContainer.classList.add('show_container');
+
+
 }
 
 );
 
-
-
+/*NB DA COMPLETARE - collegamento a Fascia eta' per gestire
+le condizioni e mostrare a video il valore di Offerta (text)
+e Costo Biglietto (Number)*/
