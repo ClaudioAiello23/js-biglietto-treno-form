@@ -24,37 +24,30 @@ let under18Price = parseFloat (basePrice /100 *80).toFixed(2);
 base e lo sconti del 40% (variabile let)*/
 let over65Price = parseFloat (basePrice /100 *60).toFixed(2);
 
-console.log(ageUser).value;
-
-// DA VERIFICARE - PER FABIO
-/*Impostazione per mostrare sulla pagina web il totale da pagare a seconda dei 
-dati compilati dall'utente*/
-if (ageUser.value == 'Minorenne'){
-    document.getElementById('final_price').innerHTML ='Biglietto Minorenne: ' +  ' random codice CP ' + (kmTravel * under18Price).toFixed(2) + "€";
-    
-} else if (ageUser.value == 'Over65'){
-    document.getElementById('final_price').innerHTML ='Biglietto Over65: ' +  ' random codice CP ' + (kmTravel * over65Price).toFixed(2) + "€";
-
-} else {
-    document.getElementById('final_price').innerHTML ='Biglietto Standard: ' +  ' random codice CP ' + (kmTravel * basePrice).toFixed(2) + "€";
-
-}
 
 
+// -------------------------------------------------------------
+// INSERIMENTO AZIONE BOTTONE "GENERA" al click del bottone
 
-// prova per numero carrozza - NUMERI RANDOM
-document.getElementById('carrozza').innerHTML ='Carrozza: ' + Math.floor(Math.random()*10);
-// prova per codice CP - NUMERI RANDOM
-document.getElementById('cp_code').innerHTML ='CP: ' + Math.floor(Math.random()*10000);
-
-
-// PROVA INSERIMENTO AZIONE BOTTONE "GENERA"  - PER FABIO
+// Creazione ed assegnazione variabili agli id/classi
 const calcButton = document.getElementById('calc_button');
+const showContainer = document.querySelector('.hidden_container');
 
+// Procedura manipolazione DOM al click del button
 calcButton.addEventListener('click',
 
 function() {
+    document.getElementById('name_repeat').innerHTML = nameUser.value;
     
+    document.getElementById('carrozza').innerHTML = Math.floor(Math.random()*10);
+
+    document.getElementById('cp_code').innerHTML = Math.floor(Math.random()*100000);
+    /*Aggiunge la classe show_container che fa apparire il contenitore
+    "il tuo biglietto al click del bottone (vedi css)"*/
+    showContainer.classList.add('show_container');
 }
 
 );
+
+
+

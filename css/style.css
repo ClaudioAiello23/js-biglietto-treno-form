@@ -1,9 +1,140 @@
-/* ****************
+/* 
+****************
 RESET 
-*************** */
+*************** 
+*/
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+/* 
+****************
+COMMON
+*************** 
+*/
+
+:root{
+    --main-color: #b91547;
+}
+
+main h1{
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5625rem;
+}
+
+main h2{
+    color: black;
+    font-size: 1.25rem;
+}
+
+
+.flex{
+    display: flex;
+}
+
+/* 
+****************
+MAIN
+*************** 
+*/
+
+
+main{
+    background-color: var(--main-color);
+    height: 100vh;
+}
+
+/* Sezione CALCOLA IL PREZZO DEL TUO BIGLIETTO */
+
+#insert_data{
+    height: 180px;
+    width: 830px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.input_container{
+    padding: 30px 100px;
+    justify-content:space-around;
+}
+
+.input_container .label{
+    color: var(--main-color);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.input_container input,
+.input_container select{
+   border: 1px solid var(--main-color);
+   border-radius: 5px;
+   padding: 5px 10px;
+   text-align: center;
+}
+
+.button_container{
+    padding: 10px 100px;
+    justify-content: center;
+}
+
+.button_container button{
+    padding: 5px 10px;
+    margin: 0 20px;
+    color: var(--main-color);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Sezione IL TUO BIGLIETTO */
+
+#your_price{
+    height:180px;
+    width: 830px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.second_container{
+    display:flex;
+    height: 120px;
+}
+
+#traveller_name{
+    background-color: #757575;
+    border: 1px solid black;
+    padding: 20px 10px;
+    font-weight: bold;
+    width: 30%;
+}
+
+#name_repeat{
+    font-size: 20px;
+}
+
+#traveller_data{
+    width: 70%;
+    justify-content: space-around;
+    padding: 20px 10px;
+    border: 1px solid black;
+}
+
+.data_title{
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.hidden_container{
+    display: none;
+}
+
+.show_container{
+    display:blocK;
 }

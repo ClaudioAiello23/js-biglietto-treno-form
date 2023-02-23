@@ -12,36 +12,67 @@
 <body>
     <main>
         <!-- Inizio sezione inserimento dati utente -->
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <section id="insert_data">
-            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <div class="data_container">
+            <div class="first_container">
                 <form action="-" method="get">
-                    <label for="name_user">Nome Cognome</label>
-                    <input type="text" name="name" id="name_user">
-                    <label for="km_travel">Km da percorrere</label>
-                    <input type="text" name="km" id="km_travel">
-                    <label for="age_user">Fascia d'età</label>
-                    <select name="age" id="age_user">
-                        <option value="Maggiorenne">Maggiorenne</option>
-                        <option value="Minorenne">Minorenne</option>
-                        <option value="Over65">Over65</option>
-                    </select>
-                    <button type="button" id="calc_button">Genera</button>
-                    <button type="reset">Annulla</button>
+                    <div class="input_container flex">
+                        <div>
+                            <div class="label"><label for="name_user">Nome Cognome</label></div>
+                            <input type="text" name="name" id="name_user">
+                        </div>
+                        <div>
+                            <div class="label"><label for="km_travel">Km da percorrere</label></div>
+                            <input type="text" name="km" id="km_travel">
+                        </div>
+                        <div>
+                            <div class="label"><label for="age_user">Fascia d'età</label></div>
+                            <select name="age" id="age_user">
+                                <option value="Maggiorenne">Maggiorenne</option>
+                                <option value="Minorenne">Minorenne</option>
+                                <option value="Over65">Over65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button_container flex">
+                        <button type="button" id="calc_button">Genera</button>
+                        <button type="reset">Annulla</button>
+                    </div>
                 </form>
             </div>
         </section>
         <!-- Fine sezione inserimento dati utente -->
         <!-- Inizio sezione calcolo tariffa utente -->
-        <section id="your_price">
-            <div id="carrozza"></div>
-            <div id="cp_code"></div>
-
-            <div id="final_price">
-
-            </div>
-
-        </section>
+        <div class="hidden_container">
+            <h1>IL TUO BIGLIETTO</h1>
+            <section id="your_price">
+                <h2>DETTAGLIO PASSEGGERI</h2>
+                <div class="second_container">
+                    <div id="traveller_name">
+                        <h2>NOME PASSEGGERO</h2>
+                        <div id="name_repeat"></div>
+                    </div>
+                    <div id="traveller_data" class="flex">
+                        <div>
+                            <div class="data_title">Offerta</div>
+                            <div>-</div>
+                        </div>
+                        <div>
+                            <div class="data_title">Carrozza</div>
+                            <div id="carrozza"></div>
+                        </div>
+                        <div>
+                            <div class="data_title">Codice CP</div>
+                            <div id="cp_code"></div>
+                        </div>
+                        <div>
+                            <div class="data_title">Costo biglietto</div>
+                            <div id="final_price"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
         <!-- Fine sezione calcolo tariffa utente -->
     </main>
 
