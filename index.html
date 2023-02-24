@@ -23,7 +23,7 @@
                         </div>
                         <div>
                             <div class="label"><label for="km_travel">Km da percorrere</label></div>
-                            <input type="text" name="km" id="km_travel">
+                            <input type="number" name="km" id="km_travel">
                         </div>
                         <div>
                             <div class="label"><label for="age_user">Fascia d'età</label></div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="button_container flex">
                         <button type="button" id="calc_button">Genera</button>
-                        <button type="reset">Annulla</button>
+                        <button type="reset" id="reset_button">Annulla</button>
                     </div>
                 </form>
             </div>
@@ -48,14 +48,14 @@
             <section id="your_price">
                 <h2>DETTAGLIO PASSEGGERI</h2>
                 <div class="second_container">
-                    <div id="traveller_name">
+                    <div id="traveller_box">
                         <h2>NOME PASSEGGERO</h2>
-                        <div id="name_repeat"></div>
+                        <div id="traveller_name"></div>
                     </div>
                     <div id="traveller_data" class="flex">
                         <div>
                             <div class="data_title">Offerta</div>
-                            <div>-</div>
+                            <div id="ticket_offer"></div>
                         </div>
                         <div>
                             <div class="data_title">Carrozza</div>

@@ -76,8 +76,12 @@ main{
    border: 1px solid var(--main-color);
    border-radius: 5px;
    padding: 5px 10px;
-   text-align: center;
 }
+
+.input_container input{
+    text-align: center;
+}
+
 
 .button_container{
     padding: 10px 100px;
@@ -107,7 +111,7 @@ main{
     height: 120px;
 }
 
-#traveller_name{
+#traveller_box{
     background-color: #757575;
     border: 1px solid black;
     padding: 20px 10px;
@@ -115,7 +119,7 @@ main{
     width: 30%;
 }
 
-#name_repeat{
+#traveller_name{
     font-size: 20px;
 }
 
